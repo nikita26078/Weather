@@ -35,7 +35,8 @@ class AppWidget : AppWidgetProvider() {
             val widgetText = context.getString(R.string.appwidget_text)
             // Construct the RemoteViews object
             val views = RemoteViews(context.packageName, R.layout.app_widget)
-            views.setTextViewText(R.id.appwidget_text, widgetText)
+            views.setImageViewResource(R.id.icon, R.mipmap.ic_launcher)
+            views.setTextViewText(R.id.info, widgetText)
 
             // Instruct the widget manager to update the widget
             appWidgetManager.updateAppWidget(appWidgetId, views)
