@@ -5,10 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import kotlinx.android.synthetic.main.list_item_weather.view.*
 import ru.playsoftware.weather.GlideApp
 import ru.playsoftware.weather.R
 import ru.playsoftware.weather.data.Day
+import ru.playsoftware.weather.databinding.ListItemWeatherBinding
 import ru.playsoftware.weather.util.getImageURL
 import ru.playsoftware.weather.util.getWeatherInfo
 
@@ -34,7 +34,9 @@ class WeatherAdapter(private var list: List<Day>) : RecyclerView.Adapter<Weather
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val icon = view.icon
-        val info = view.info
+        private var binding: ListItemWeatherBinding = ListItemWeatherBinding.bind(view)
+
+        val icon = binding.icon
+        val info = binding.info
     }
 }
