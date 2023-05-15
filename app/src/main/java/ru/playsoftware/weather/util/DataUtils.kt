@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
 
-
 fun getWeatherInfo(day: Day): String {
     return getDate(day.dt * 1000L, "dd.MM.yyyy") +
             " " + day.temp.day.roundToInt().toString() +

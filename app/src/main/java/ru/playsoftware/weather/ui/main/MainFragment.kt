@@ -62,7 +62,6 @@ class MainFragment : Fragment() {
                     }
                 })
         compositeDisposable.add(disposable)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
